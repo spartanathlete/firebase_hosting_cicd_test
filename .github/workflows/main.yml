@@ -28,4 +28,4 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           tag: v1.0.${{ github.run_number }}
-          token: ${{ secrets.TOKEN }}
+          token: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_FIR_HOSTING_CICD_TEST }}
