@@ -26,5 +26,7 @@ jobs:
       - run: flutter build web
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          tag: v1.0.${{ github.run_number }}
-          token: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_FIR_HOSTING_CICD_TEST }}
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_CLOUDFIRESTORE_UTRACK_API }}'
+          channelId: live
+          projectId: fir-hosting-cicd-test
