@@ -15,7 +15,7 @@ jobs:
         with:
           java-version: '12.x'
       - uses: subosito/flutter-action@v1
-      - uses: 'Install flutter packages'
+      - name: 'Install flutter packages'
       - run: flutter pub get
       - name: 'Build web app'
       - run: flutter build web
