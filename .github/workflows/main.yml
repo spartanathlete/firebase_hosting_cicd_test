@@ -15,7 +15,7 @@ jobs:
     name: Build & Release
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3
       - uses: actions/setup-java@v1
         with:
           java-version: '16.x'
@@ -29,5 +29,3 @@ jobs:
         with:
           tag: v1.0.${{ github.run_number }}
           token: ${{ secrets.TOKEN }}
-
-
