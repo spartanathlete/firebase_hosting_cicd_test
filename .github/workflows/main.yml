@@ -24,8 +24,9 @@ jobs:
           flutter-version: '3.13.9'
       - run: flutter pub get
       - run: flutter build web
-      - name: Push & Release
-        uses: ncipollo/release-action@v1
+      - run: flutter deploy
+      # - name: Push & Release
+      #   uses: ncipollo/release-action@v1
         with:
           tag: v1.0.${{ github.run_number }}
           token: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_FIR_HOSTING_CICD_TEST }}
